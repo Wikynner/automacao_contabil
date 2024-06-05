@@ -6,7 +6,7 @@ import pyodbc
 
 
 # Função para conectar ao MySQL
-def conectar_mysql(host="localhost", user="root", password="", port=3306, database="alertas_bi"):
+def conectar_mysql(host="localhost", user="", password="", port=, database=""):
     try:
         conn = mysql.connector.connect(
             host=host,
@@ -22,7 +22,7 @@ def conectar_mysql(host="localhost", user="root", password="", port=3306, databa
         return None
 
 # Função para conectar ao SQL Server
-def conectar_sql_server(server="192.168.100.105", database="agrimanager", user="controladoria", password="Senha@2022"):
+def conectar_sql_server(server="", database="", user="", password=""):
     try:
         conn = pyodbc.connect(
             'DRIVER={SQL Server};'
